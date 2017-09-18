@@ -1,0 +1,7 @@
+$("a[href='/emails/<%= @email.id%>']").bind('ajax:success', function() {
+   $(this).closest('tr').fadeOut();
+});
+
+$('.delete_email').bind('ajax:success', function() {
+   $(this).closest('div').fadeOut();
+});

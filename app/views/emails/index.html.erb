@@ -1,0 +1,33 @@
+<header>
+  <div class="main">
+    <h1>Email Box</h1>
+  </div>
+
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Boite Mail</th>
+                        <th colspan="3"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @emails.each do |email| %>
+                        <tr>
+                            <td class="mails">
+                                <%= link_to email.object, email, remote: true, class:"objet" %>
+                            </td>
+                        </tr>
+                        <% end %>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-8 email-content">
+          <div id="contenu"></div>
+        </div>
+    </div>
+</div>

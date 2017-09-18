@@ -1,0 +1,16 @@
+
+
+<div class="mails">
+  <div class="header">
+
+
+<h1> Object:</h1>
+ <span><%= email.object %></span>
+   </div>
+<p class="text-justify emailBody"> <%= email.body %> </p>
+
+
+<p class="btn btn-danger"><%= link_to 'Delete Email', email, :remote => true, :class => 'delete_email', method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+
+</div>
